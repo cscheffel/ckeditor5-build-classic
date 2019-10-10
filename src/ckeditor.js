@@ -105,5 +105,5 @@ ClassicEditor.defaultConfig = config;
 InlineEditor.defaultConfig = config;
 
 export default {
-    ClassicEditor, InlineEditor
+	ClassicEditor, InlineEditor
 };
