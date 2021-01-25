@@ -17,7 +17,10 @@ module.exports = {
 	devtool: 'source-map',
 	performance: { hints: false },
 
-	entry: path.resolve( __dirname, 'src', 'ckeditor.js' ),
+	entry: [
+		require.resolve( 'regenerator-runtime/runtime.js' ),
+		path.resolve( __dirname, 'src', 'ckeditor.js' ),
+	],
 
 	output: {
 		// The name under which the editor will be exported.
@@ -48,7 +51,7 @@ module.exports = {
 		new CKEditorWebpackPlugin( {
 			// UI language. Language codes follow the https://en.wikipedia.org/wiki/ISO_639-1 format.
 			// When changing the built-in language, remember to also change it in the editor's configuration (src/ckeditor.js).
-			language: 'en',
+			language: 'de',
 			additionalLanguages: 'all'
 		} ),
 		new webpack.BannerPlugin( {
@@ -59,6 +62,17 @@ module.exports = {
 
 	module: {
 		rules: [
+			{
+				test: /ckeditor5-[^\/\\]+[\/\\].+\.js$/,
+				use: [
+					{
+						loader: 'babel-loader',
+						options: {
+							presets: [ require( '@babel/preset-env' ) ]
+						}
+					}
+				]
+			},
 			{
 				test: /\.svg$/,
 				use: [ 'raw-loader' ]
