@@ -81,7 +81,6 @@ const config = {
 			'numberedList',
 			'blockQuote',
 			'insertTable',
-			'placeholder',
 			'|',
 			'undo',
 			'redo'
