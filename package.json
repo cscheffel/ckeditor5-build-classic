@@ -1,6 +1,6 @@
 {
   "name": "@testsysteme/ckeditor5-build-classic",
-  "version": "12.5.10",
+  "version": "12.5.12",
   "description": "The classic editor build of CKEditor 5 – the best browser-based rich text editor.",
   "keywords": [
     "ckeditor5-build",
@@ -27,7 +27,7 @@
   "dependencies": {
     "@babel/core": "^7.12.10",
     "@babel/preset-env": "^7.12.11",
-    "@testsysteme/ckeditor5-placeholder": "^1.1.0",
+    "@testsysteme/ckeditor5-placeholder": "^1.1.3",
     "babel-loader": "^8.2.2",
     "regenerator-runtime": "^0.13.7"
   },
