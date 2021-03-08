@@ -14,6 +14,7 @@ import Bold from '@ckeditor/ckeditor5-basic-styles/src/bold';
 import Italic from '@ckeditor/ckeditor5-basic-styles/src/italic';
 import BlockQuote from '@ckeditor/ckeditor5-block-quote/src/blockquote';
 import Heading from '@ckeditor/ckeditor5-heading/src/heading';
+import Comments from '@ckeditor/ckeditor5-comments/src/comments';
 import Image from '@ckeditor/ckeditor5-image/src/image';
 import ImageCaption from '@ckeditor/ckeditor5-image/src/imagecaption';
 import ImageResize from '@ckeditor/ckeditor5-image/src/imageresize';
@@ -32,6 +33,9 @@ import TableProperties from '@ckeditor/ckeditor5-table/src/tableproperties';
 import TableCellProperties from '@ckeditor/ckeditor5-table/src/tablecellproperties';
 import Base64UploadAdapter from '@ckeditor/ckeditor5-upload/src/adapters/base64uploadadapter';
 import SimpleUploadAdapter from '@ckeditor/ckeditor5-upload/src/adapters/simpleuploadadapter';
+import CommentsRepository from '@ckeditor/ckeditor5-comments/src/comments/commentsrepository';
+import NarrowSidebar from '@ckeditor/ckeditor5-comments/src/annotations/narrowsidebar';
+import WideSidebar from '@ckeditor/ckeditor5-comments/src/annotations/widesidebar';
 
 class ClassicEditor extends ClassicEditorBase { }
 class InlineEditor extends InlineEditorBase { }
@@ -43,6 +47,7 @@ const plugins = [
 	Autoformat,
 	Base64UploadAdapter,
 	Bold,
+	Comments,
 	Italic,
 	BlockQuote,
 	Heading,
@@ -62,7 +67,10 @@ const plugins = [
 	Table,
 	TableToolbar,
 	TableProperties,
-	TableCellProperties
+	TableCellProperties,
+	CommentsRepository,
+	NarrowSidebar,
+	WideSidebar
 ];
 
 ClassicEditor.builtinPlugins = plugins;
@@ -70,6 +78,7 @@ InlineEditor.builtinPlugins = plugins;
 
 // Editor configuration.
 const config = {
+	licenseKey: 'Lpj7+nBn+iUpUjTPO49scII13G4a7dPaaPnqXe9en8VUkUoXGl9oowHLVq8sng==',
 	toolbar: {
 		items: [
 			'heading',
@@ -91,7 +100,7 @@ const config = {
 			'imageStyle:full',
 			'imageStyle:side',
 			'|',
-			'imageTextAlternative',
+			'imageTextAlternative'
 		]
 	},
 	table: {
