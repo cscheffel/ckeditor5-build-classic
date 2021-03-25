@@ -1,6 +1,6 @@
 {
   "name": "@testsysteme/ckeditor5-build-classic",
-  "version": "12.6.2",
+  "version": "12.7.0",
   "description": "The classic editor build of CKEditor 5 – the best browser-based rich text editor.",
   "keywords": [
     "ckeditor5-build",
@@ -42,6 +42,7 @@
     "@ckeditor/ckeditor5-dev-webpack-plugin": "^24.3.0",
     "@ckeditor/ckeditor5-editor-classic": "^26.0.0",
     "@ckeditor/ckeditor5-editor-inline": "^26.0.0",
+    "@ckeditor/ckeditor5-editor-balloon": "^26.0.0",
     "@ckeditor/ckeditor5-essentials": "^26.0.0",
     "@ckeditor/ckeditor5-heading": "^26.0.0",
     "@ckeditor/ckeditor5-image": "^26.0.0",
